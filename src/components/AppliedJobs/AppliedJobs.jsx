@@ -29,15 +29,15 @@ const AppliedJobs = () => {
         if (jobs.length > 0) {
 
 
-            // const jobsApplied = jobs.filter(job => storedJobIds.includes(job.id));
+            const jobsApplied = jobs.filter(job => storedJobIds.includes(job.id));
 
-            const jobsApplied = [];
-            for (const id of storedJobIds) {
-                const job = jobs.find(job => job.id === id);
-                if (job) {
-                    jobsApplied.push(job)
-                }
-            }
+            // const jobsApplied = [];
+            // for (const id of storedJobIds) {
+            //     const job = jobs.find(job => job.id === id);
+            //     if (job) {
+            //         jobsApplied.push(job)
+            //     }
+            // }
             setAppliedJobs(jobsApplied);
             setDisplayJobs(jobsApplied);
             // console.log(jobs, storedJobIds, jobsApplied)
